@@ -154,3 +154,120 @@
     </div>
 </body>
 </html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Menu with Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .nav {
+            background: #152935;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        .nav-item {
+            color: white;
+            text-align: center;
+            cursor: pointer;
+            position: relative;
+        }
+        .nav-item img {
+            width: 40px;
+            height: 40px;
+            display: block;
+            margin: auto;
+        }
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            border-radius: 5px;
+            width: 300px;
+            z-index: 100;
+        }
+        .nav-item:hover .submenu {
+            display: block;
+        }
+        .search-container {
+            text-align: center;
+            margin: 20px;
+        }
+        .search-container input {
+            width: 50%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .table-container {
+            width: 80%;
+            margin: 20px auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #152935;
+            color: white;
+        }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search products..." onkeyup="searchFunction()">
+    </div>
+    <div class="table-container">
+        <table>
+            <tr>
+                <th>Product</th>
+                <th>Unibis Shortcut</th>
+            </tr>
+            <tr><td>Strut</td><td>Strut</td></tr>
+            <tr><td>Joining Plates</td><td>Joinplat</td></tr>
+            <tr><td>Ladder Tray</td><td>Ladder tray</td></tr>
+            <tr><td>Ladder Tray Cover</td><td>Ladder tray Cover</td></tr>
+            <tr><td>Plain to Screw Adaptor</td><td>Adaptor</td></tr>
+            <tr><td>Bush</td><td>Bush</td></tr>
+            <tr><td>Cclip</td><td>Cclip</td></tr>
+        </table>
+    </div>
+    
+    <script>
+        function searchFunction() {
+            let input = document.getElementById("searchInput").value.toLowerCase();
+            let tables = document.querySelectorAll("table");
+            
+            tables.forEach(table => {
+                let rows = table.getElementsByTagName("tr");
+                for (let i = 1; i < rows.length; i++) {
+                    let text = rows[i].innerText.toLowerCase();
+                    rows[i].style.display = text.includes(input) ? "" : "none";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
