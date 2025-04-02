@@ -227,12 +227,23 @@
             border: 1px solid #ddd;
             padding: 10px;
             text-align: left;
+            position: relative;
         }
         th {
             background-color: #152935;
             color: white;
         }
-        .hidden { display: none; }
+        .copy-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            color: blue;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
     </style>
 </head>
 <body>
@@ -245,13 +256,13 @@
                 <th>Product</th>
                 <th>Unibis Shortcut</th>
             </tr>
-            <tr><td>Strut</td><td>Strut</td></tr>
-            <tr><td>Joining Plates</td><td>Joinplat</td></tr>
-            <tr><td>Ladder Tray</td><td>Ladder tray</td></tr>
-            <tr><td>Ladder Tray Cover</td><td>Ladder tray Cover</td></tr>
-            <tr><td>Plain to Screw Adaptor</td><td>Adaptor</td></tr>
-            <tr><td>Bush</td><td>Bush</td></tr>
-            <tr><td>Cclip</td><td>Cclip</td></tr>
+            <tr><td>Strut</td><td><span>Strut</span> <button class="copy-btn" onclick="copyText(this)">📋</button></td></tr>
+            <tr><td>Joining Plates</td><td><span>Joinplat</span> <button class="copy-btn" onclick="copyText(this)">📋</button></td></tr>
+            <tr><td>Ladder Tray</td><td><span>Ladder tray</span> <button class="copy-btn" onclick="copyText(this)">📋</button></td></tr>
+            <tr><td>Ladder Tray Cover</td><td><span>Ladder tray Cover</span> <button class="copy-btn" onclick="copyText(this)">📋</button></td></tr>
+            <tr><td>Plain to Screw Adaptor</td><td><span>Adaptor</span> <button class="copy-btn" onclick="copyText(this)">📋</button></td></tr>
+            <tr><td>Bush</td><td><span>Bush</span> <button class="copy-btn" onclick="copyText(this)">📋</button></td></tr>
+            <tr><td>Cclip</td><td><span>Cclip</span> <button class="copy-btn" onclick="copyText(this)">📋</button></td></tr>
         </table>
     </div>
     
@@ -266,6 +277,13 @@
                     let text = rows[i].innerText.toLowerCase();
                     rows[i].style.display = text.includes(input) ? "" : "none";
                 }
+            });
+        }
+
+        function copyText(button) {
+            let text = button.previousElementSibling.textContent.trim();
+            navigator.clipboard.writeText(text).then(() => {
+                alert("Copied: " + text);
             });
         }
     </script>
