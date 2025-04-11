@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .nav {
+            background: #152935;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        .nav-item {
+            color: white;
+            text-align: center;
+            cursor: pointer;
+            position: relative;
+        }
+        .nav-item img {
+            width: 40px;
+            height: 40px;
+            display: block;
+            margin: auto;
+        }
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            border-radius: 5px;
+            width: 300px;
+            z-index: 100;
+        }
+        .nav-item:hover .submenu {
+            display: block;
+        }
+        .submenu div {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .submenu div:last-child {
+            border-bottom: none;
+        }
+        .submenu img {
+            width: 50px;
+            height: 50px;
+            flex-shrink: 0;
+        }
+        .submenu span {
+            flex-grow: 1;
+            font-size: 14px;
+            color: #333;
+        }
+        .submenu a {
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="nav-item">
+            <img src="https://www.burndycss.com.au/wp-content/uploads/2016/05/LT3-LTR.jpg" alt="Burndy">
+            Comming Soon!
+            <div class="submenu">
+                <div><a href="surface_mount.html"><img src="surface_mount.png" alt="Surface Mount"><span>Ladder Tray</span></a></div>
+                <div><a href="recessed.html"><img src="recessed.png" alt="Recessed"><span>Ladder Tray Cover</span></a></div>
+                <div><a href="meter_boxes.html"><img src="meter_boxes.png" alt="Meter Boxes"><span>Ladder Tray Acceceries</span></a></div>
+                <div><a href="mains_connection.html"><img src="mains_connection.png" alt="Mains Connection Boxes"><span>Strut / Unistrut</span></a></div>
+                <div><a href="switchboards.html"><img src="switchboards.png" alt="Switchboards Metal"><span>Strut Accencorics</span></a></div>
+            </div>
+        </div>
+        <div class="nav-item">
+            <img src="https://bricspac.com/wp-content/uploads/2023/05/wooden-cable-drum-1024x683.jpg" alt="Switches">
+            Comming Soon!
+            <div class="submenu">
+                <div><a href="toggle_switches.html"><img src="toggle_switches.png" alt="Toggle Switches"><span>Building Wire</span></a></div>
+                <div><a href="smart_switches.html"><img src="smart_switches.png" alt="Smart Switches"><span>TPS Flat</span></a></div>
+                <div><a href="dimmer_switches.html"><img src="dimmer_switches.png" alt="Dimmer Switches"><span>Orange Circular</span></a></div>
+            </div>
+        </div>
+        <div class="nav-item">
+            <img src="http://sparkydirect.com.au/assets/thumbL/C2025D-WE.jpg?20250321105534" alt="Clipsal">
+            Comming Soon!
+            <div class="submenu">
+                <div><a href="power_points.html"><img src="https://www.sparkydirect.com.au/assets/alt_5/3025VW.jpg?20250321105534" alt="Power Points"><span>Power Points</span></a></div>
+                <div><a href="switches.html"><img src="switches.png" alt="Switches"><span>Switches</span></a></div>
+                <div><a href="lighting.html"><img src="lighting.png" alt="Lighting"><span>Lighting</span></a></div>
+            </div>
+        </div>
+        <div class="nav-item">
+            <img src="https://media.bunnings.com.au/api/public/content/2c7ae84ab3d8478b820d6b20801cbb55?v=fb2902ce&t=w700dpr1" alt="Accessories">
+            Comming Soon!
+            <div class="submenu">
+                <div><a href="busbars.html"><img src="busbars.png" alt="Insulated Busbars"><span>Insulated Busbars</span></a></div>
+                <div><a href="distribution_boards.html"><img src="distribution_boards.png" alt="Weatherproof Distribution Boards"><span>Weatherproof Distribution Boards</span></a></div>
+                <div><a href="tools_fasteners.html"><img src="tools_fasteners.png" alt="Tools & Fasteners"><span>Tools & Fasteners</span></a></div>
+            </div>
+        </div>
+        <div class="nav-item">
+            <img src="https://www.schnap.com.au/images/detailed/109/cli263-50.jpg" alt="Accessories">
+            Comming Soon!
+            <div class="submenu">
+                <div><a href="busbars.html"><img src="busbars.png" alt="Insulated Busbars"><span>Insulated Busbars</span></a></div>
+                <div><a href="distribution_boards.html"><img src="distribution_boards.png" alt="Weatherproof Distribution Boards"><span>Weatherproof Distribution Boards</span></a></div>
+                <div><a href="tools_fasteners.html"><img src="tools_fasteners.png" alt="Tools & Fasteners"><span>Tools & Fasteners</span></a></div>
+            </div>
+        </div>
+        <div class="nav-item">
+            <img src="https://www.sparkydirect.com.au/assets/full/MSN106.jpg?20250321105534" alt="Accessories">
+            Comming Soon!
+            <div class="submenu">
+                <div><a href="busbars.html"><img src="busbars.png" alt="Insulated Busbars"><span>Insulated Busbars</span></a></div>
+                <div><a href="distribution_boards.html"><img src="distribution_boards.png" alt="Weatherproof Distribution Boards"><span>Weatherproof Distribution Boards</span></a></div>
+                <div><a href="tools_fasteners.html"><img src="tools_fasteners.png" alt="Tools & Fasteners"><span>Tools & Fasteners</span></a></div>
+            </div>
+        </div>
+      <div class="nav-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBIaUiBkl6227Huwrl2XqFwgrS2nsKEbv7TA&s" alt="Accessories">
+            Comming Soon!
+            <div class="submenu">
+                <div><a href="busbars.html"><img src="busbars.png" alt="Insulated Busbars"><span>Insulated Busbars</span></a></div>
+                <div><a href="distribution_boards.html"><img src="distribution_boards.png" alt="Weatherproof Distribution Boards"><span>Weatherproof Distribution Boards</span></a></div>
+                <div><a href="tools_fasteners.html"><img src="tools_fasteners.png" alt="Tools & Fasteners"><span>Tools & Fasteners</span></a></div>
+            </div>
+        </div>
+       <div class="nav-item">
+            <img src="https://www.aatech.com.bd/images/thumbnails/465/465/detailed/2/UTP_Panduit_Cat-6_Cable_Price_in_Bangladesh.png" alt="Accessories">
+            Data
+            <div class="submenu">
+                <div><a href="PatchCords.html"><img src="https://www.4cabling.com.au/media/catalog/product/cache/efc78653d6f4db25077ab405c09fd635/0/0/004_002_0003_detail_lores_5_1.jpg" alt="Insulated Busbars"><span>Patch Cords</span></a></div>
+                <div><a href="Cat6+ACable.html"><img src="https://www.aatech.com.bd/images/detailed/2/UTP_Panduit_Cat-6_Cable_Price_in_Bangladesh.jpg" alt="Weatherproof Distribution Boards"><span>Cat6+ACables</span></a></div>
+                <div><a href="PatchPanels.html"><img src="https://www.commscope.com/globalassets/digizuite/486685-760162818-3rt.jpg/medium?mediaformatid=50055" alt="Tools & Fasteners"><span>Patch Panels</span></a></div>
+                <div><a href="Cat6+AJacks.html"><img src="https://www.commscope.com/globalassets/digizuite/994897-slx-dc.jpg/small" alt="Tools & Fasteners"><span>Cat6+A Jacks</span></a></div>
+                <div><a href="CableManagment.html"><img src="tools_fasteners.png" alt="Tools & Fasteners"><span>Cable Managment</span></a></div>
+            </div>
+        </div>
+      <div class="nav-item">
+            <img src="https://www.sparkydirect.com.au/assets/thumbL/ROMA48HSWH.jpg?20250321105534" alt="Accessories">
+            Comming Soon! 
+            <div class="submenu">
+                <div><a href="busbars.html"><img src="busbars.png" alt="Insulated Busbars"><span>Insulated Busbars</span></a></div>
+                <div><a href="distribution_boards.html"><img src="distribution_boards.png" alt="Weatherproof Distribution Boards"><span>Weatherproof Distribution Boards</span></a></div>
+                <div><a href="tools_fasteners.html"><img src="tools_fasteners.png" alt="Tools & Fasteners"><span>Tools & Fasteners</span></a></div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
